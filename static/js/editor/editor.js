@@ -705,11 +705,13 @@ this.Editor = class Editor extends Manager {
         range: this.editor.getSelectionRange()
       };
     }
+    
     different = name !== this.selected_source;
     this.selected_source = name;
     if (this.selected_source != null) {
       this.updateSourceLanguage();
     }
+    
     if (this.selected_source != null) {
       source = this.app.project.getSource(this.selected_source);
       this.setCode(source.content);
